@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Window Location Example</title>
+</head>
+<body>
+    
+<p>Current URL: <span id="currentUrl"></span></p>
+
+<button onclick="reload()">Reload Page</button>
+<button onclick="visitpage()">Visit W3Schools.com</button>
+
+<script>
+function CurrentUrl(){
+    document.getElementById('currentUrl').textContent = window.location.href;
+}
+
+function reload(){
+    window.location.reload();
+}
+
+function visitpage(){
+    window.location.assign('https://www.w3schools.com');
+}
+
+window.onload = function() {
+    CurrentUrl();
+};
+</script>
+
+</body>
+</html>
